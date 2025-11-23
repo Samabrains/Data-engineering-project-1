@@ -1,0 +1,48 @@
+table taxi_zone_lookup
+	lineageTag: 44f73406-14a0-4f9f-b4be-153a4e109b38
+	sourceLineageTag: [dbo].[taxi_zone_lookup]
+
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 231ebb6b-e904-4995-a4cb-6dcc83b069b2
+		sourceLineageTag: LocationID
+		summarizeBy: count
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Borough
+		dataType: string
+		lineageTag: b409df05-4612-45e9-b369-72dbd807cea7
+		sourceLineageTag: Borough
+		summarizeBy: none
+		sourceColumn: Borough
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zone
+		dataType: string
+		lineageTag: 100c5bc0-38bf-4aac-becb-2ee1d47864d6
+		sourceLineageTag: Zone
+		summarizeBy: none
+		sourceColumn: Zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_zone
+		dataType: string
+		lineageTag: c3dec383-2260-4071-a433-54c410752f22
+		sourceLineageTag: service_zone
+		summarizeBy: none
+		sourceColumn: service_zone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition taxi_zone_lookup = entity
+		mode: directLake
+		source
+			entityName: taxi_zone_lookup
+			schemaName: dbo
+			expressionSource: 'DirectLake - Bronze'
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "taxidata"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f087f7ff-4449-8632-4859-133414f6fc4e"
+  }
+}
